@@ -1,4 +1,4 @@
-# A list of users, where each user is represented as a dictionary with an "id" and a "name".
+# A list of users represented as a dictionary with an "id" and a "name".
 users = [
     {"id": 0, "name": "Hero"},
     {"id": 1, "name": "Dunn"},
@@ -12,7 +12,7 @@ users = [
     {"id": 9, "name": "Klein"},
 ]
 
-# A list of tuples representing friendship pairs. Each tuple contains two user IDs.
+# A list of tuples representing friendship pairs.
 friendship_pairs = [
     (0, 1),
     (0, 2),
@@ -27,6 +27,9 @@ friendship_pairs = [
     (7, 8),
     (8, 9),
 ]
+
+
+
 
 # ADD A LIST OF FRIENDS TO EACH USER
 
@@ -52,6 +55,10 @@ friendships = {user["id"]: [] for user in users}
 for i, j in friendship_pairs:
     friendships[i].append(j)  # Add j as a friend of user i
     friendships[j].append(i)  # Add i as a friend of user j
+
+
+
+
 
 # LET'S FIND THE AVERAGE NUMBER OF CONNECTIONS
 # First create a method to count number of friends for each user
