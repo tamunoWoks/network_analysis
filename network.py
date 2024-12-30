@@ -32,3 +32,8 @@ friendship_pairs = [
 # Create empty list of friends for each user
 for user in users:
     user["friends"] = []
+
+# Populate the friends list with frienship_pairs data
+for i, j in friendship_pairs:
+    users[i]["friends"].append(users[j])
+    users[j]["friends"].append(users[i])
