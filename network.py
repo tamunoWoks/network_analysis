@@ -27,3 +27,8 @@ friendship_pairs = [
     (7, 8),
     (8, 9),
 ]
+
+#--------------------------------------------
+# Create empty list of friends for each user
+for user in users:
+    user["friends"] = []
