@@ -56,3 +56,5 @@ for i, j in friendship_pairs:
 def number_of_friends(user):
     return len(friendships[user["id"]])  # Length of the friends list for the user's ID
 
+# Calculate total connections 
+total_connections = sum(number_of_friends(user) for user in users)
