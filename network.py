@@ -1,3 +1,4 @@
+# A list of users, where each user is represented as a dictionary with an "id" and a "name".
 users = [
     {"id": 0, "name": "Hero"},
     {"id": 1, "name": "Dunn"},
@@ -11,6 +12,7 @@ users = [
     {"id": 9, "name": "Klein"},
 ]
 
+# A list of tuples representing friendship pairs. Each tuple contains two user IDs.
 friendship_pairs = [
     (0, 1),
     (0, 2),
