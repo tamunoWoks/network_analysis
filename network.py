@@ -37,3 +37,7 @@ for user in users:
 for i, j in friendship_pairs:
     users[i]["friends"].append(users[j])
     users[j]["friends"].append(users[i])
+
+# Create method to count number of friends for each user
+def number_of_friends(user):
+    return len(user["friends"])
