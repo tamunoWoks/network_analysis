@@ -60,3 +60,7 @@ def number_of_friends(user):
 
 # Calculate total connections 
 total_connections = sum(number_of_friends(user) for user in users)
+
+# Now Calculate the average number of connections
+num_users = len(users)
+avg_connections = total_connections / num_users
