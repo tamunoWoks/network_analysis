@@ -28,7 +28,7 @@ friendship_pairs = [
     (8, 9),
 ]
 
-#--------------------------------------------
+#-----------------------------------------------------------------
 # Create empty list of friends for each user
 for user in users:
     user["friends"] = []
@@ -41,3 +41,5 @@ for i, j in friendship_pairs:
 # Create method to count number of friends for each user
 def number_of_friends(user):
     return len(user["friends"])
+# ----------------We can also do this another way-------------------
+
