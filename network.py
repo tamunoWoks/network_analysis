@@ -29,17 +29,30 @@ friendship_pairs = [
 ]
 
 #-----------------------------------------------------------------
-# Create empty list of friends for each user
-for user in users:
-    user["friends"] = []
+## Create empty list of friends for each user
+#for user in users:
+#   user["friends"] = []
 
-# Populate the friends list with frienship_pairs data
+## Populate the friends list with frienship_pairs data
+#for i, j in friendship_pairs:
+#    users[i]["friends"].append(users[j])
+#    users[j]["friends"].append(users[i])
+
+## Create method to count number of friends for each user
+#def number_of_friends(user):
+#    return len(user["friends"])
+# ----------------We can also do this another way-------------------
+
+# ----------------Alternate solution-------------------
+# Initialize the dict with an empty list for each user id:
+friendships = {user["id"]: [] for user in users}
+
+# Loop over the friendship pairs to populate it:
 for i, j in friendship_pairs:
-    users[i]["friends"].append(users[j])
-    users[j]["friends"].append(users[i])
+    friendships[i].append(j)  # Add j as a friend of user i
+    friendships[j].append(i)  # Add i as a friend of user j
 
 # Create method to count number of friends for each user
 def number_of_friends(user):
-    return len(user["friends"])
-# ----------------We can also do this another way-------------------
+    return len(friendships[user["id"]])  # Length of the friends list for the user's ID
 
