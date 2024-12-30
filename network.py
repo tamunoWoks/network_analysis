@@ -28,12 +28,13 @@ friendship_pairs = [
     (8, 9),
 ]
 
-#-----------------------------------------------------------------
-## Create empty list of friends for each user
+# ADD A LIST OF FRIENDS TO EACH USER
+
+## First create an empty list of friends for each user
 #for user in users:
 #   user["friends"] = []
 
-## Populate the friends list with frienship_pairs data
+## Then Populate the friends list with frienship_pairs data
 #for i, j in friendship_pairs:
 #    users[i]["friends"].append(users[j])
 #    users[j]["friends"].append(users[i])
@@ -41,9 +42,9 @@ friendship_pairs = [
 ## Create method to count number of friends for each user
 #def number_of_friends(user):
 #    return len(user["friends"])
-# ----------------We can also do this another way-------------------
+#We can also do this another way
 
-# ----------------Alternate solution-------------------
+# Alternate solution
 # Initialize the dict with an empty list for each user id:
 friendships = {user["id"]: [] for user in users}
 
@@ -52,7 +53,8 @@ for i, j in friendship_pairs:
     friendships[i].append(j)  # Add j as a friend of user i
     friendships[j].append(i)  # Add i as a friend of user j
 
-# Create method to count number of friends for each user
+# LET'S FIND THE AVERAGE NUMBER OF CONNECTIONS
+# First create a method to count number of friends for each user
 def number_of_friends(user):
     return len(friendships[user["id"]])  # Length of the friends list for the user's ID
 
