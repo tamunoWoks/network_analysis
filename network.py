@@ -71,3 +71,16 @@ total_connections = sum(number_of_friends(user) for user in users)
 # Now Calculate the average number of connections
 num_users = len(users)
 avg_connections = total_connections / num_users
+
+
+
+
+
+# LET'S FIND THE MOST CONNECTED PEOPLE
+# First create a tuple(user_id, number of friends)
+num_friends_by_id = [(user["id"], number_of_friends(user)) for user in users]
+
+# Now sort it by second element (number of friends) from largest to smallest
+num_friends_by_id.sort(
+    key=lambda id_and_friends: id_and_friends[1], reverse=True
+)
